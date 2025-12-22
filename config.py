@@ -32,13 +32,8 @@ def discord_payload(answer: dict[str, object], url: str) -> dict[str, object]:
         "content": f"[情報元URL]({url})",
         "embeds": [
             {
-                "title": answer["name"],
-                "description": answer["doc"],
-                "url": answer["url"],
-                "fields": [
-                    {"name": "価格", "value": answer["price"], "inline": False},
-                    {"name": "商品の販売URL", "value": answer["url"], "inline": False}
-                ]
+                "title": answer["title"],
+                "description": answer["doc"]
             }
         ]
     }
